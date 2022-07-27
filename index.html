@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- ionicons -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrap">
+
+
+        <!-- NAVBAR =============================== -->
+        <nav class="navbar">
+            <div class="menu">
+                <ion-icon name="ios-menu"></ion-icon>
+            </div>
+            <div class="logo">spotify</div>
+            <div class="search">
+                <ion-icon name="ios-search"></ion-icon>
+            </div>
+            <div class="cart">
+                <ion-icon name="ios-cart"></ion-icon>
+            </div>
+            <div class="profile">
+                <img src="profile.jpg" alt="">
+            </div>
+        </nav>
+        <!-- PRODUCT IMAGE =============================== -->
+        <img src="hero.png" class="product-img">
+        <!-- PRODUCT TITLE =============================== -->
+        <div class="title">
+            <span>play</span>
+        </div>
+        <!-- DOTS =============================== -->
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <!-- SLIDER =============================== -->
+        <div class="silder">
+            <div class="pages">
+                <span>01</span>04
+            </div>
+            <div class="arrows">
+                <ion-icon name="ios-arrow-back"></ion-icon>
+                <ion-icon name="ios-arrow-forward"></ion-icon>
+            </div>
+        </div>
+        <!-- SOCIAL MEDIA  =============================== -->
+        <div class="media">
+            <ul>
+                <li>
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </li>
+                <li>
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </li>
+                <li>
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </li>
+                <li>
+                    <ion-icon name="logo-snapchat"></ion-icon>
+                </li>
+            </ul>
+        </div>
+        <!-- PLAY ICON=============================== -->
+        <div class="play-icon">
+            <img src="play.png" id="play-icon">
+        </div>
+        <!-- AUDIO =============================== -->
+        <audio src="music.mp3" id="mysong"></audio>
+
+
+    </div>
+
+    <script>
+        var mySong = document.getElementById("mysong");
+        var icon = document.getElementById("play-icon");
+
+        icon.onclick = function() {
+            if (mySong.paused) {
+                mySong.play();
+                icon.src = "pause.png"
+            } else {
+                mySong.pause();
+                icon.src = "play.png"
+            }
+
+        }
+    </script>
+</body>
+
+</html>
